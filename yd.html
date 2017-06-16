@@ -1,0 +1,412 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>读书</title>
+<script src="jquery-3.2.1.min.js"></script>
+<link rel="stylesheet" href="bootstrap.min.css">
+<script src="bootstrap.min.js"></script> 
+<style>
+a {
+  color: red;
+}
+a:hover, a:focus {
+  text-decoration: none;
+  transition: background-color, color, 0.3s;
+}
+a:link, a:visited{
+  text-decoration: none;
+  transition: background-color, color, 0.3s;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: #6c7279;
+}
+  .header {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+.header .header-content {
+  margin: 0 auto;
+  max-width: 1170px;
+  padding: 40px 0;
+  width: 100%;
+  transition: padding 0.3s;
+  width:100%;
+  height: 30px;
+}
+.header .logo {
+  font-size: 27px;
+  color: #000;
+  letter-spacing: 3px;
+  font-weight: 300;
+  float: left;
+  text-transform: uppercase;
+}
+.header.fixed .header-content {
+  border-bottom: 0;
+  padding: 25px 0;
+}
+.nav.open {
+  opacity: 0.9;
+  visibility: visible;
+  transition: opacity 0.5s;
+}
+.nav {
+  float: right;
+}
+.nav li {
+  display: inline-block;
+}
+.nav a {
+  color: red;
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-left: 40px;
+}
+.nav a:hover, .nav a.active {
+  color: #262626;
+}
+.carousel {
+  padding-top: 100px;
+  width: 94%;
+  height: 500px;
+  margin: auto;
+}
+.item, .active, .carousel-inner {
+  height: 100%;
+}
+.carousel-caption {
+  bottom: 40%;
+  color: #fff;
+  left: 15%;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  position: absolute;
+  right: 15%;
+  text-align: center;
+  z-index: 10;
+}
+.carousel-caption h3 {
+  font-family: "Open Sans", sans-serif;
+  color: #2d3033;
+  text-shadow: none;
+  font-size: 31px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+.carousel-caption p {
+  font-family: "Open Sans", sans-serif;
+  color: #6c7279;
+  text-shadow: none;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+.carousel-control.left {
+  background: none;
+}
+.carousel-control.right {
+  background: none;
+}
+.carousel-control {
+  opacity: 1;
+  text-shadow: none;
+}
+.intro-content1 h1 {
+  font-size: 55px;
+  font-weight: 700;
+  letter-spacing: -3px;
+}
+.intro-content3 h4 {
+  font-size: 15px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.intro-content2 p {
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 19px;
+  margin-top:100px;
+}
+.intro-content3 li {
+  line-height: 30px;
+  letter-spacing: 1px;
+  margin-left:40px;
+
+}
+.row{
+  width: 100%;
+  height: 400px;
+}
+.intro-content1{
+  float: left;
+  width: 30%;
+  height: 400px; 
+  text-align: center;
+}
+.intro-content2{
+  float: left;
+  width: 39.5%;
+  height: 400px; 
+  text-align: center;
+} 
+.intro-content3{
+  float: left;
+  width: 30%;
+  height: 400px; 
+}
+.work {
+  box-shadow: 0 0 0 1px #fff;
+  overflow: hidden;
+  position: relative;
+  width: 49%;
+  height: 600px;
+  float: left;
+  margin-left:1%;
+  margin-bottom: 1%;
+}
+.work img {
+  width: 100%;
+  height: 100%;
+}
+.work .overlay {
+  background: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  transition: opacity, 0.3s;
+}
+.work .overlay-caption {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 100%;
+}
+.work p {
+  transform: translate3d(0, 200%, 0);
+}
+.work-box:hover img {
+  transform: scale(1.2);
+}
+.work-box:hover .overlay {
+  opacity: 1;
+}
+.work-box:hover， .work-box:hover{
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+.testimonials {
+  width: 94%;
+  margin: auto;
+  background-color: #333;
+  position: relative;
+  text-align: center;
+  overflow:hidden;
+}
+.testimonials blockquote {
+  border: 0;
+  margin: 0;
+  padding: 100px 15%;
+}
+.testimonials h1 {
+  color: #fff;
+  font: 19px "Open Sans", sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+.testimonials p {
+  color: #fff;
+  display: block;
+  font-size: 11px;
+  font-style: normal;
+  letter-spacing: 2px;
+  font-weight: 400;
+  margin-top: 30px;
+  text-transform: uppercase;
+}
+.footer {
+  width: 94%;
+  margin: auto;
+  text-align: left;
+  padding-top: 5%;
+  padding-bottom: 7%;
+}
+.footer h4 {
+  font-size: 13px;
+  color: #000;
+  margin: 0 0 15px 0;
+  padding: 0px;
+}
+.footer p {
+  font-size: 11px;
+  color: #6c7279;
+}
+.footer a {
+  color: #000;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+.footer .footer-share {
+  margin-top: 0;
+}
+.footer .footer-share li {
+  display: inline-block;
+  float: none;
+}
+.footer .footer-share a {
+  border: none;
+  font-size: 13px;
+  color: #000;
+  letter-spacing: 15px;
+}
+.footer .fa-heart {
+  color: #e84545;
+  font-size: 11px;
+  margin: 0 2px;
+}
+.footer{
+  text-align: center;
+}
+</style>
+</head>
+
+<body>
+  <div class ="header">
+    <div class="header-content"> <a class="logo" href="index.html">IT之家</a>
+      <nav class="nav">
+        <ul>
+          <li><a href="acm.html">ACM</a></li>
+          <li><a href="wy.html">网页设计</a></li>
+          <li><a href="grjs.html">个人</a></li>
+        </ul>
+      </nav>
+    </div><!-- header-content -->
+  </div><!-- header -->
+<div id="header-slider" class="section">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel"> 
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+    </ol>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active"> <img src="images/17.jpg" alt="Chania" width="100%">
+        <div class="carousel-caption">
+          <h3>We'r Auro</h3>
+          <p>We Build Strong Brands which impact your customers</p>
+        </div>
+      </div>
+      <div class="item"> <img src="images/19.jpg" alt="Chania" width="100%">
+        <div class="carousel-caption">
+          <h3>Minimal Agency Template</h3>
+          <p>We're Australia based branding & design agency</p>
+        </div>
+      </div>
+    </div>
+    <!-- Controls --> 
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> <span class="sr-only">Previous</span></a> <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <span class="sr-only">Next</span></a></div>
+</div>
+<div class="introduction">
+   <div class="row">
+      <div class="intro-content1">
+        <h1>书<br>心灵之窗</h1>
+      </div><!-- intro-content1 -->
+      <div class="intro-content2">
+        <p>书中自有黄金屋，所以读书能够让你在有限的时间内，掌握大量的科学文化知识，摆脱愚昧和迷信，将空白的大脑赋予了丰富的知识色彩。同时，读书是一个终身的学习过程，只有通过长期的读书学习中，我们自身文化素养才会被慢慢熏陶。<br>读书可以静心。社会的烦躁，唯有读书能得到片刻安宁，让你回归最初的自我的思想。</p>
+      </div><!-- intro-content2 -->
+      <div class="intro-content3">
+        <h4>my expertise</h4>
+        <ul>
+          <li> - 麦田守望者</li>
+          <li> - 中庸</li>
+          <li> - 老人与海</li>
+          <li> - 朱自清散文集</li>
+          <li> - 狼图腾</li>
+          <li> - 小王子</li>
+        </ul>
+      </div><!-- intro-content3 -->
+  </div><!-- row -->
+</div><!-- introduction -->
+<div id="works" class="no-padding">
+      <div class="work"> <a href="images/20.jpg" class="work-box"> <img src="images/20.jpg" alt=""  width="290px" height="290px" >
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p>博弈论</i></p>
+          </div><!-- overlay -->
+        </div><!-- overlay-caption -->
+        </a> </div><!-- work -->
+      <div class="work"> <a href="images/21.jpg" class="work-box"> <img src="images/21.jpg" alt=""  width="290px" height="290px" >
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p>平凡之路</p>
+          </div><!-- overlay -->
+        </div><!-- overlay-caption -->
+        </a> </div><!-- work -->
+      <div class="work"> <a href="images/22.jpg" class="work-box"> <img src="images/22.jpg" alt="" width="290px" height="290px" >
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p>二战风云人物经典传</p>
+          </div><!-- overlay -->
+        </div><!-- overlay-caption -->
+        </a> </div><!-- work -->
+      <div class="work"> <a href="images/23.jpg" class="work-box"> <img src="images/23.jpg" alt=""  width="290px" height="290px" >
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p>曾国藩家书</p>
+          </div><!-- overlay -->
+        </div><!-- overlay-caption -->
+        </a> </div><!-- work -->
+      <div class="work"> <a href="images/24.jpg" class="work-box"> <img src="images/24.jpg" alt=""  width="290px" height="290px" >
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p>上帝掷骰子</p>
+          </div><!-- overlay -->
+        </div><!-- overlay-caption -->
+        </a> </div><!-- work -->
+      <div class="work"> <a href="images/25.jpg" class="work-box"> <img src="images/25.jpg" alt=""  width="290px" height="290px" >
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p>啊哈！原来如</p>
+          </div><!-- overlay -->
+        </div><!-- overlay-caption -->
+        </a></div><!-- work -->
+</div>
+<footer id="contact" class="footer">
+  <div class="container-fluid">
+    <div class="col-md-2 left">
+      <h4>Office Location</h4>
+      <p> Collins Street West Victoria 8007 Australia.</p>
+    </div>
+    <div class="col-md-2 left">
+      <h4>Contact</h4>
+      <p> Call: 612.269.8419 <br>
+        Email : <a href="mailto:hello@agency.com"> hello@agency.com </a></p>
+    </div>
+    <div class="col-md-2 left">
+      <h4>Social presense</h4>
+      <ul class="footer-share">
+        <li><a href="#">上帝掷骰子</a></li>
+        <li><a href="#">啊哈！原来如</i></a></li>
+        <li><a href="#"></i></a></li>
+        <li><a href="#"></i></a></li>
+      </ul>
+    </div>
+    <div class="col-md-6 right">
+      <p>© 2017 All rights reserved. All Rights Reserved<br>
+        More Templates</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

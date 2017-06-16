@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>计算器</title>
+
+<style>
+.jsq{
+  border-radius:10px;
+  margin: 0 auto;
+  border: 1px solid  #ccc; 
+  width: 300px;
+  height: 350px;
+  background:url("2233.jpg");
+}
+.js{
+  /*margin:auto;*/
+  width: 250px;
+  height: 250px;
+  margin-top: 30px; 
+  padding-left: 45px;
+}
+.btn{
+    border-radius:15px;
+    display:block; 
+    float: left;
+    height: 40px;
+    width: 50px;
+    text-shadow: 2px 2px 4px #ccc;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px 3px;
+    background-color: #F5FFFA;
+}
+.btn1{
+    border-radius:15px;
+    display:block; 
+    float: left;
+    height: 40px;
+    width: 50px;
+    text-shadow: 2px 2px 4px #ccc;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px 3px;
+    color: red;
+    background-color: #F5FFFA;
+}
+#txtValue{
+    /*display:block;*/
+    width: 200px;
+    text-align: right;
+    height: 40px;
+    font-size: 16px;
+    background-color: #F0FFFF;
+}
+</style>
+<script>
+  var a=0, b=0, c=0;
+  var op=0;
+  var s=1;
+  function amount(num){
+    if (s==1)
+      document.form1.txtValue.value = num;
+    else
+      document.form1.txtValue.value += num;
+    s=0;
+  }
+  function Operater(value) {
+    a = Number(document.form1.txtValue.value);
+    op = value;
+    s=1;
+  }
+  function Compute(){
+    b = Number(document.form1.txtValue.value);
+    switch(op){
+      case "+": c = a+b; break;
+      case "-": c = a-b; break;
+      case "*": c = a*b; break;
+      case "/": c = a/b; break;
+    }
+    document.form1.txtValue.value = c;
+    s=1;
+  }
+</script>
+</head>
+<body>
+<div class="jsq">
+<div class="js">
+<form name="form1">
+  <input type="text" id="txtValue" size="10" name="result" value="">
+  <br><br>
+  <input type="button" class="btn" value="7" onClick="amount(value)"/>
+  <input type="button" class="btn" value="8" onClick="amount(value)"/>
+  <input type="button" class="btn" value="9" onClick="amount(value)"/>
+  <input type="button" class="btn1" value="/" onClick="Operater(value)"/>
+  <br><br>
+  <input type="button" class="btn" value="4" onClick="amount(value)"/>
+  <input type="button" class="btn" value="5" onClick="amount(value)"/>
+  <input type="button" class="btn" value="6" onClick="amount(value)"/>
+  <input type="button" class="btn1" value="*" onClick="Operater(value)"/>
+  <br><br>
+  <input type="button" class="btn" value="1" onClick="amount(value)"/>
+  <input type="button" class="btn" value="2" onClick="amount(value)"/>
+  <input type="button" class="btn" value="3" onClick="amount(value)"/>
+  <input type="button" class="btn1" value="-" onClick="Operater(value)"/>
+  <br><br>
+  <input type="button" class="btn" value="0" onClick="amount(value)"/>
+  <input type="button" class="btn" value="." onClick="amount(value)"/>
+  <input type="button" class="btn1" value="=" onClick="Compute()"/>
+  <input type="button" class="btn1" value="+" onClick="Operater(value)"/>
+  <br><br>
+</form>  
+</div>
+</div>
+</body>
+</html>

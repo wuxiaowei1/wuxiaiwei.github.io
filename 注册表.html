@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+  <title>注册表</title>
+  <style>
+  div{
+    margin-bottom: 22px;
+  }
+  label{
+    display: block;
+    width: 40%;
+    float: left;
+    text-align: right;
+    margin-right: 15px;
+    font-size: 20px;
+    font-family: 楷体;
+    font-weight: bold;
+  }
+  fieldset{
+    margin:auto;
+    width: 45%;
+    background-image:url(images/4.jpg);
+  }
+  input.submit{
+    margin-left: 45%;
+    height: 30px;
+    font-size: 16px;
+    font-family: 楷体;
+    font-weight: bold;
+  }
+  legend{
+    text-align: center;
+    font-size: 45px;
+    font-family: 楷体;
+    font-weight: bold;
+  }
+  textarea{
+    height: 100px;
+    width: 30%;
+  }
+  .text1{
+    height: 20px;
+    font-size: 18px;
+    font-family: 楷体;
+    font-weight: bold;
+  }
+  input.zt{
+    height: 30px;
+    font-size: 16px;
+    font-family: 楷体;
+    font-weight: bold;
+  }
+  .zt:hover{
+    background: #EA3C00;
+  }
+  .sr{
+    width: 188px;
+    height: 20px;
+    font-size: 18px;
+    font-family: 楷体;
+    font-weight: bold;
+  }
+  
+  </style>
+</head>
+<body>
+<form action="" method="post">
+<fieldset>
+<legend>注册表</legend>
+  <div>
+    <label for="username">用户名</label>
+    <input type="text" name="username" size="20" placeholder="请输入用户名" required class="text1">
+  </div>
+  <div>
+    <label for="password">密码</label>
+    <input type="password" name="username" size="18" placeholder="请输入密码" required class="text1">
+  </div>
+  <div>
+    <label for="repassword">确认密码</label>
+    <input type="password" name="repassword" size="18" placeholder="请再次输入密码" required class="text1">
+  </div>
+  <div>
+    <label for="sex">性别</label>
+    <input type="radio" name="sex" value="男">男
+    <input type="radio" name="sex" value="女">女
+  </div>
+  <div>
+    <label for="birthday">生日</label>
+    <input type="date" name="date" class="sr">    
+  </div>
+  <div>
+     <label>爱号</label>
+    <input type="checkbox" name="toy" value="跑步" class="text1">跑步</input>
+    <input type="checkbox" name="toy" value="看书" class="text1">看书</input>
+    <input type="checkbox" name="toy" value="看电影" class="text1">看电影</input>
+    <input type="checkbox" name="toy" value="听音乐" class="text1">听音乐</input>
+    <input type="checkbox" name="toy" value="玩游戏" class="text1">玩游戏</input>
+  </div>
+  </div>
+  <div>
+    <label for="email">邮箱</label>
+    <input type="email" name="email" size="18"placeholder="....@email.com"  class="text1" >
+  </div>
+  <div>
+    <label for="tel">电话号码</label>
+    <input type="tel" name="tel" size="18" class="text1" required>
+  </div>
+  <div>
+    <label>所在地</label>
+    <select name="country" class="text1">
+      <option value="中国">中国</option>
+      <option value="英国">英国</option>
+      <option value="日本">日本</option>
+      <option value="美国">美国</option>
+      <option value="俄罗斯">俄罗斯</option>
+    </select>
+    <select name="province" class="text1">
+      <option value="江西">江西</option>
+      <option value="上海">上海</option>
+      <option value="广州">广州</option>
+      <option value="深圳">深圳</option>
+      <option value="北京">北京</option>
+    </select>
+    <select name="city" class="text1">
+      <option value="南昌">南昌</option>
+      <option value="宜春">宜春</option>
+      <option value="上饶">上饶</option>
+    </select>
+  </div>
+  <div>
+    <label class="field" for="text1">留言</label>
+    <textarea id="bio" rows="6" cols="4" placeholder="有什么意见"></textarea>
+  </div>
+  <div>
+    <a href="#"><input type="submit" class="submit" value="注册" class="zt"></a>
+    <input type="reset" value="重填" class="zt">
+  </div>
+</fieldset>
+</form>
+</body>
+</html>

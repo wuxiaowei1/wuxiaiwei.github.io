@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>个人简介</title>
+  <style>
+   body{
+    margin: 0;
+    padding: 0;
+   }
+   .main-top{
+    width: 100%;
+    height: 600px;
+    background-image:url(images/bg.jpg);
+   }
+   .main-t{
+       font-size: 30px;
+       font-weight: bold;
+       text-align: center;
+       text-shadow: 2px 1px 2px 3px; 
+       color: #f0f;
+   }
+   .main-t img{
+      margin-top: 100px;
+      border-radius:50%;
+   }
+   .main-t button{
+      width: 150px;
+      height: 50px;
+      color: #000;
+      text-align: center;
+   }
+   .main-middle{
+     padding-top: 1px;
+     height: 500px;
+     width: 29%;
+     background-image:url(images/portfolio/1.jpg);
+     float: left;
+   }
+   .main-middle p{
+      margin-top:200px; 
+      text-align: center;
+      font-size: 20px;
+   }
+   .main-wz{
+     padding-top: 1px;
+     height: 500px;
+     width: 70%;
+     float: left;
+     background-image:url(images/portfolio/7.jpg);
+   }
+   .panel{
+    text-align: center;
+    font-size: 20px;
+    height: 360px;
+    display: none;
+   }
+   .flip{
+     height: 30px;
+     font-size: 25px;
+     text-align: center;
+   }
+   .main-middle1{
+     padding-top: 1px;
+     height: 500px;
+     width: 29%;
+     background-image:url(images/portfolio/3.jpg);
+     float: right;
+   }
+   .main-middle1 p{
+      margin-top:200px; 
+      text-align: center;
+      font-size: 20px;
+   }
+   .main-wz1{
+     padding-top: 1px;
+     height: 500px;
+     width: 70%;
+     float: right;
+     background-image:url(images/portfolio/8.jpg);
+   }
+   .panel1{
+    text-align: center;
+    font-size: 20px;
+    height: 360px;
+    display: none;
+   }
+   .flip1{
+     height: 30px;
+     font-size: 25px;
+     text-align: center;
+   }
+   .main-middle2{
+     padding-top: 1px;
+     height: 500px;
+     width: 29%;
+     background-image:url(images/portfolio/6.jpg);
+     float: left;
+   }
+   .main-middle2 p{
+      margin-top:100px; 
+      text-align: center;
+      font-size: 20px;
+   }
+   .main-wz2{
+     padding-top: 1px;
+     height: 500px;
+     width: 70%;
+     float: left;
+     background-image:url(images/portfolio/4.jpg);
+   }
+   .panel2{
+    text-align: center;
+    font-size: 20px;
+    height: 360px;
+    display: none;
+   }
+   .flip2{
+     height: 30px;
+     font-size: 30px;
+     text-align: center;
+   }
+   .top{
+    background-image:url(images/bg.jpg);
+    width: 100%;
+    height: 400px;
+   }
+   .top-tp{
+    width: 25%;
+    height: 400px;
+    float: left;
+   }
+
+   .top-tp img{
+     text-align: center;
+     border-radius:50%;
+     margin: 0 auto;
+   }
+   .top-wz{
+     padding-top: 200px;
+     text-align: center;
+     width: 60%;
+     height: 400px;
+     font-size:20px;
+     text-align: center; 
+     float: left;
+   }
+   .top-wz p{
+    color: red;
+   }
+  </style>
+  <script src="jquery-3.2.1.min.js"></script>
+</head>
+<body background="images/bg.jpg">
+<div class="main">
+  <div class="main-top">
+    <div class="main-t">
+      <img src="images/12.jpg">
+      <p id="test2">宁愿做过后悔， 也不要错过后悔</p>
+         <button>VIEI MY WORKS</button>
+    </div>
+  </div><!--main-top结束-->
+  <div class="entire">
+  <div class="main-middle">
+     <p><a href="#"> 世界那么大
+     多去看看</a></p>
+  </div><!--main-middle结束-->
+  <div class="main-wz">
+    <p class="flip">明月山</p>
+    <div class="panel">
+      <p>明月山景区由温汤、潭下、塘佳山、太平山、玉京山、仰山六大景区组成，主要景点有乌云崖、瑞庆塔、仰山积雪、云谷飞瀑、崖石争怪、天然植物园、酌江溶洞群、袁山耸翠、南池涌珠、钓台烟雨、温汤春暖、仰山墓塔群、普同塔、玉皇殿、夜观明月、出木井、慈化景点（包括慈化寺、观音阁、出木井、革命旧址）、昌黎书院、袁州谯楼、袁州会议旧址、体育中心、城区公园（春台公园、化成岩森林公园、状元洲公园、袁山公园）等20多处
+      </p> 
+   </div><!--panel结束-->
+  </div><!--main-wz结束-->
+  <div class="main-middle1">
+     <p>AMBLENCE</p>
+  </div><!--main-middle1结束-->
+  <div class="main-wz1">
+    <p class="flip1">音乐之美</p>
+    <div class="panel1">
+      <p>音乐可以分为声乐和器乐两大类型，又可以粗略的分为古典音乐、民间音乐、原生态音乐、现代音乐（包括流行音乐）等。在艺术类型中，音乐是比较抽象的艺术，音乐从历史发展上可分为东方音乐和西方音乐。东方以中国汉族音乐为首的中国古代理论基础是五声音阶，即宫、商、角、徵、羽，西方是以七声音阶为主。音乐让人赏心悦目，并为大家带来听觉的享受。音乐能提高人的审美能力，净化人们的心灵，树立崇高的理想。我们通过音乐来抒发我们的情感，使我们的很多情绪得到释放。
+      </p> 
+   </div><!--panel1结束-->
+  </div><!--main-wz1结束-->
+  <div class="main-middle2">
+     <p>KITCHEN
+     </p>
+  </div><!--main-middle2结束-->
+  <div class="main-wz2">
+    <p class="flip2">生活之美</p>
+    <div class="panel2">
+      <p>美食，顾名思义就是美味的食物，贵的有山珍海味，便宜的有街边小吃。其实美食是不分贵贱的，只要是自己喜欢的，都可以称之为美食。中国素有”烹饪王国“这个美誉。在中国这个大家庭里，我们有五十六个小家庭，每个家庭都有自己的特色美食。美食吃前有期待、吃后有回味，已不仅仅是简单的味觉感受，更是一种精神享受。享受美食也要看场合，场合好美食起来也有味道。世界各地美食文化博大精深，营养物质各不相同，品味更多美食，享受更多健康，也让人吃的更加开心。
+      </p> 
+   </div><!--panel2结束-->
+  </div><!--main-wz2结束-->
+</div><!--entire结束-->
+<div class="top">
+  <div class="top-tp">
+    <img src="images/portfolio/9.jpg">    
+  </div>
+  <div class="top-wz">
+    <p>A man provided with paper, pencil, and rubber, and subject to strict discipline,
+     is in effect a universal Turing Machine.</p>
+  </div>
+</div>
+<
+</div><!--main结束-->
+<script>
+    $('#test2').click(function(){
+        $(this).css('color','blue');
+    })
+    $(document).ready(function(){
+      $(".flip").click(function(){
+        $(".panel").slideToggle("slow");
+       });
+    });
+    $(document).ready(function(){
+      $(".flip1").click(function(){
+        $(".panel1").slideToggle("slow");
+       });
+    });
+    $(document).ready(function(){
+      $(".flip2").click(function(){
+        $(".panel2").slideToggle("slow");
+       });
+    });
+    $(document).ready(function(){
+      $("button").click(function(){
+        $(".entire").slideToggle("slow");
+       });
+    });
+</script> 
+</script>
+</body>
+</html>

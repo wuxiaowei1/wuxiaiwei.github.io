@@ -1,0 +1,373 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>主页</title>
+  <style type="text/css">
+a {
+  color: red;
+}
+a:hover, a:focus {
+  text-decoration: none;
+}
+a:link, a:visited{
+  text-decoration: none;
+}
+body {
+  font-weight: 400;
+  color: #6c7279;
+}
+.btn {
+  border: 1px solid rgba(0, 0, 0, 0.75);
+  margin-top: 20px;
+  color: #2a2a2a;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding: 1.5% 3%;
+  display: inline-block;
+  text-align: center;
+}
+.btn:hover, .btn:focus {
+  background-color: #2a2a2a;
+  color: #fff;
+}
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+.header .header-content {
+  margin: 0 auto;
+  max-width: 1170px;
+  padding: 40px 0;
+  width: 100%;
+  width:100%;
+  height: 30px;
+}
+.header .logo {
+  font-size: 27px;
+  color: #000;
+  letter-spacing: 3px;
+  font-weight: 300;
+  float: left;
+}
+/*.header.fixed .header-content{
+  border-bottom: 0;
+  padding: 25px 0;
+}*/
+.nav.open {
+  opacity: 0.9;
+  visibility: visible;
+}
+.nav {
+  float: right;
+}
+.nav li {
+  display: inline-block;
+}
+.nav a {
+  color: red;
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-left: 40px;
+}
+.nav a:hover, .nav a.active {
+  color: #262626;
+}
+.banner {
+  background-image: url(images/16.jpg);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 750px;
+  width: 100%;
+  height: 800px;
+}
+.banner-wrapper {
+  text-align: center;
+}
+.banner-text {
+  padding-top: 15%;
+  width: 100%;
+  height: 600px;
+  padding-left: 40%;
+}
+.banner-text h1 {
+  color: #393939;
+  font-size: 23px;
+  font-weight: 400;
+  margin-top: 40px;
+}
+.banner-text p {
+  color: #393939;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-top: 60px;
+}
+.intro-content1 h1 {
+  font-size: 55px;
+  font-weight: 700;
+  letter-spacing: -3px;
+}
+.intro-content3 h4 {
+  font-size: 15px;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+.intro-content2 p {
+  font-size: 12px;
+  letter-spacing: 1px;
+  line-height: 19px;
+  margin-top:100px;
+}
+.intro-content3 li {
+  line-height: 30px;
+  letter-spacing: 1px;
+  margin-left:40px;
+
+}
+.row{
+  width: 100%;
+  height: 400px;
+}
+.intro-content1{
+  float: left;
+  width: 30%;
+  height: 400px; 
+  text-align: center;
+}
+.intro-content2{
+  float: left;
+  width: 39.5%;
+  height: 400px; 
+  text-align: center;
+} 
+.intro-content3{
+  float: left;
+  width: 30%;
+  height: 400px; 
+}
+.work {
+  box-shadow: 0 0 0 1px #fff;
+  overflow: hidden;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  float: left;
+  margin-left:10%;
+  margin-bottom: 10%;
+}
+.work img {
+  width: 100%;
+  height: 100%;
+}
+.work .overlay {
+  background: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.work .overlay-caption {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 100%;
+}
+.work p {
+  transform: translate3d(0, 200%, 0);
+}
+.work-box:hover img {
+  transform: scale(1.2);
+}
+.work-box:hover .overlay {
+  opacity: 1;
+}
+.work-box:hover， .work-box:hover{
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+.copy{
+  width: 100%;
+  height: 250px;
+  margin-top: 10px;
+}
+.copy_content{
+  width: 1200px;
+  margin: 0 auto;
+  padding-top:60px;
+}
+.copy_content li{
+  list-style-type: none;
+  float: left;
+  width: 230px;
+  text-align: center;
+  line-height: 30px;
+}
+.copy_content a{
+  text-decoration: none;
+  color: #778899;
+  font-size: 16px;
+}
+.copy_content li ul li{
+  width: 150px;
+  background: url(img/line.png) no-repeat right center;
+  font-size: 14px;
+}
+.footer{
+  margin-top: 800px;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  color: #999;
+  font-size: 16px;
+  background-color: #808080;
+}
+</style>
+</head>
+<body>
+<div class="banner"> 
+  <div class ="header">
+    <div class="header-content"> <a class="logo" href="#">IT之家</a>
+      <nav class="nav">
+        <ul>
+          <li><a href="acm.html">ACM</a></li>
+          <li><a href="wy.html">网页设计</a></li>
+          <li><a href="grjs.html">个人</a></li>
+        </ul>
+      </nav>
+    </div><!-- header-content -->
+  </div><!-- header -->
+  <div class="bannerr-wrapper">
+    <div class="banner-text">
+      <h1>I'm Johnathan. A Freelance Creative Director</h1>
+      <p>One page resume, portfolio Bootstrap template for designers.</p>
+      <a href="#" class="btn">Find out more</a> </div>      
+    </div><!-- banner-text -->
+  </div><!-- banner-wrapper -->
+</div><!-- banner -->
+<div class="introduction">
+   <div class="row">
+      <div class="intro-content1">
+        <h1>I do What <br>I love to do</h1>
+      </div><!-- intro-content1 -->
+      <div class="intro-content2">
+        <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo.</br>
+          Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. </p>
+      </div><!-- intro-content2 -->
+      <div class="intro-content3">
+        <h4>my expertise</h4>
+        <ul>
+          <li> - web design and development</li>
+          <li> - C programming language</li>
+          <li> - Digital marketing</li>
+          <li> - java</li>
+          <li> - Data structure</li>
+          <li> - Algorithm</li>
+        </ul>
+      </div><!-- intro-content3 -->
+  </div><!-- row -->
+</div><!-- introduction -->
+<div id="works" class="no-padding">
+      <div class="work"> <a href="images/work-1.jpg" class="work-box"> <img src="images/work-1.jpg" alt=""  width="290px" height="290px" >
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p>acm</i></p>
+          </div><!-- overlay -->
+        </div><!-- overlay-caption -->
+        </a> </div><!-- work -->
+      <div class="work"> <a href="yd.html" class="work-box"> <img src="images/work-2.jpg" alt=""  width="290px" height="290px" >
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p>看书</p>
+          </div><!-- overlay -->
+        </div><!-- overlay-caption -->
+        </a> </div><!-- work -->
+      <div class="work"> <a href="dy.html" class="work-box"> <img src="images/work-3.jpg" alt="" width="290px" height="290px" >
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p>电影</p>
+          </div><!-- overlay -->
+        </div><!-- overlay-caption -->
+        </a> </div><!-- work -->
+      <div class="work"> <a href="images/work-4.jpg" class="work-box"> <img src="images/work-4.jpg" alt=""  width="290px" height="290px" >
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p>音乐</p>
+          </div><!-- overlay -->
+        </div><!-- overlay-caption -->
+        </a> </div><!-- work -->
+      <div class="work"> <a href="images/work-5.jpg" class="work-box"> <img src="images/work-5.jpg" alt=""  width="290px" height="290px" >
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p>游玩</p>
+          </div><!-- overlay -->
+        </div><!-- overlay-caption -->
+        </a> </div><!-- work -->
+      <div class="work"> <a href="images/work-6.jpg" class="work-box"> <img src="images/work-6.jpg" alt=""  width="290px" height="290px" >
+        <div class="overlay">
+          <div class="overlay-caption">
+            <p>阅读</p>
+          </div><!-- overlay -->
+        </div><!-- overlay-caption -->
+        </a></div><!-- work -->
+</div>
+<div class="copy">
+  <div class="copy_content">
+    <ul>
+      <li>
+        <a href="#">ACM</a>
+        <ul>
+          <li><a href="#">南阳ACM</a></li>
+          <li><a href="#">杭电ACM</a></li>
+          <li><a href="#">北京ACM</a></li>
+          <li><a href="#">asffd</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">算法学习</a>
+        <ul>
+          <li><a href="#">贪心算法</a></li>
+          <li><a href="#">动态规划</a></li>
+          <li><a href="#">暴力算法</a></li>
+          <li><a href="#">KMP</a></li>
+        </ul>        
+      </li>
+      <li>
+        <a href="#">网页学习</a>
+        <ul>
+          <li><a href="#">HTML5</a></li>
+          <li><a href="#">CSS3</a></li>
+          <li><a href="#">JS</a></li>
+          <li><a href="#">JQ</a></li>
+        </ul>
+      </li>
+      <li>
+      <a href="#">编程语言</a>
+        <ul>
+          <li><a href="#">C语言</a></li>
+          <li><a href="#">C++语言</a></li>
+          <li><a href="#">java语言</a></li>
+          <li><a href="#">python语言</a></li>
+        </ul>         
+      </li>
+      <li>
+      <a href="#"><img src="images/weixin.png"/> 微信关注</a>
+       <ul>
+          <li><a href="#"><img src="images/10.jpg"></a></li>
+        </ul>
+      </li>
+    </ul>
+  </div><!-- copy_content -->
+</div><!-- copy -->
+<div class="footer">
+    <p>Copyright &copy ; 2017 by the April</p>
+</div><!-- footer -->
+</body>
+</html>
